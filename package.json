@@ -1,0 +1,21 @@
+{
+  "name": "@nongrujiu99/e-commerce-full-service-assistant",
+  "version": "1.0.0",
+  "description": "Codex skill for planning and generating ecommerce product detail pages and main images.",
+  "files": [
+    "e-commerce-full-service-assistant"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nongrujiu99/e-commerce-full-service-assistant.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "keywords": [
+    "codex-skill",
+    "ecommerce",
+    "taobao",
+    "image-generation"
+  ]
+}

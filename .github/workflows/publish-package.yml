@@ -1,0 +1,57 @@
+name: Publish skill package
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Package version to publish (for example, 1.0.1)
+        required: true
+        default: 1.0.0
+        type: string
+
+concurrency:
+  group: publish-skill-package
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 20
+          registry-url: https://npm.pkg.github.com
+          scope: "@nongrujiu99"
+
+      - name: Use release tag as package version
+        if: github.event_name == 'release'
+        shell: bash
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: |
+          version="${RELEASE_TAG#v}"
+          npm version --no-git-tag-version "$version"
+
+      - name: Use manually supplied package version
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          PACKAGE_VERSION: ${{ inputs.version }}
+        run: npm version --no-git-tag-version "$PACKAGE_VERSION"
+
+      - name: Validate package contents
+        run: npm pack --dry-run
+
+      - name: Publish to GitHub Packages
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
