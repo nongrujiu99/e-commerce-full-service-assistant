@@ -1,0 +1,20 @@
+interface:
+  display_name: e commerce full service assistant
+  short_description: 淘宝电商全案助手，用于淘宝电商策划、详情页设计、主图制作、详情页+主图全套出图。Use when creating Taobao
+    ecommerce detail pages, main images, PDP image packs, product-photo-to-detail-page
+    frameworks, or direct image generation from product photos. Especially useful
+    for buyer-demand-led detail pages, full-category product strategy, standard versus
+    non-standard product differentiation, reference-led style confirmation, scene-based
+    high-density layouts, direct selling-point copy, product-consistency and physical-logic
+    locks, direct built-in image_gen generation, classified folder delivery with planning
+    documents, saving generated files locally, and displaying generated images in
+    the chat. 触发词：淘宝电商全案、详情页、主图、淘宝电商策划、详情页+主图
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
