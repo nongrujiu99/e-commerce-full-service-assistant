@@ -40,13 +40,13 @@ jobs:
           RELEASE_TAG: ${{ github.event.release.tag_name }}
         run: |
           version="${RELEASE_TAG#v}"
-          npm version --no-git-tag-version "$version"
+          npm version --allow-same-version --no-git-tag-version "$version"
 
       - name: Use manually supplied package version
         if: github.event_name == 'workflow_dispatch'
         env:
           PACKAGE_VERSION: ${{ inputs.version }}
-        run: npm version --no-git-tag-version "$PACKAGE_VERSION"
+        run: npm version --allow-same-version --no-git-tag-version "$PACKAGE_VERSION"
 
       - name: Validate package contents
         run: npm pack --dry-run
