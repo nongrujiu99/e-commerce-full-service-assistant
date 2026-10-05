@@ -1,6 +1,6 @@
 {
   "name": "@nongrujiu99/e-commerce-full-service-assistant",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Codex skill for planning and generating ecommerce product detail pages and main images.",
   "files": [
     "e-commerce-full-service-assistant"
