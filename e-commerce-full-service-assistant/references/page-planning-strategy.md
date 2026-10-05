@@ -43,7 +43,7 @@ The selected hero direction becomes module 01 unless the user explicitly specifi
 
 Do not finalize modules before style approval. Use the approved style direction, palette, lighting, typography feel, information density, visual devices, and user adjustments when planning modules.
 
-Plan the exact number of modules before image generation. Default to 8–10 screens for standard products; increase to 10–14 screens for complex products with enough confirmed information and distinct buyer questions. Reduce only when the user requests fewer images. Each detail-page screen uses a fixed 1500px width and adaptive height ≤3000px.
+Plan the exact number of modules before image generation. Default to 8–10 screens for standard products; increase to 10–14 screens for complex products with enough confirmed information and distinct buyer questions. Reduce only when the user requests fewer images. Each detail-page screen uses a fixed 1504px width and a selected height of 2256px, 2496px, or 2992px.
 
 Each module must include:
 

@@ -58,17 +58,17 @@ Direct-generation boundary: every delivered detail-page image must be generated 
 11. Read [references/prompt-contract.md](references/prompt-contract.md) to assemble each detail-page prompt. Add the same product-consistency anchors, `Module Plan`, `Demand-to-Selling-Point Match`, `Page Task Table`, approved `Style System Lock`, `Design Strength Lock`, and `Product Identity & Physics Lock` to every prompt.
 12. When the user requests a full ecommerce image set, also plan main images (主图): 5–8 images at 1200×1200px, 1:1 ratio by default. Main-image roles: full product hero, front/back/side angles, key detail close-up, usage or lifestyle scene, size/scale reference, and packaging or included-items shot. Keep main-image copy minimal.
 13. After style approval, when the user asks for images, generation, a version, or direct visual output, generate images directly by default without asking for another proceed confirmation.
-14. For direct image generation, read [references/generation-tools.md](references/generation-tools.md) and use built-in `image_gen` directly. Generate detail-page screens at 1500px width with adaptive height ≤3000px, and main images at 1200×1200px (1:1) by default. Do not use any external deployment helper or direct HTTP/SDK image API. Do not enter an automatic QA or regeneration loop.
+14. For direct image generation, read [references/generation-tools.md](references/generation-tools.md) and use built-in `image_gen` directly. Generate detail-page screens at 1504px width with a legal 16-pixel-multiple height: normally 2256px, 2496px for high-information screens, or 2992px for extra-long screens. Main images remain 1200×1200px (1:1) by default. Do not use any external deployment helper or direct HTTP/SDK image API. Do not enter an automatic QA or regeneration loop.
 15. Handle high-risk claims about efficacy, certifications, sales, reviews, testing, or brand authorization conservatively according to [references/compliance.md](references/compliance.md).
 
 ## Hard Rules
 
 - Default detail-page screen count: 8–10 screens for standard products; 10–14 screens for complex products with enough confirmed information and distinct buyer questions. Reduce only when the user requests fewer images. Final generation count must follow the `Module Plan`. If the user specifies a quantity, plan and generate exactly that quantity.
-- Every detail-page screen must use a fixed width of `1500px` and a per-screen height no greater than `3000px`. Height is adaptive per screen based on content (typically 1500–2500px, never exceeding 3000px). The first line of every detail-page prompt must include `1500px width, height ≤3000px ecommerce detail page screen, portrait orientation`. Screens within one set may have different heights but must share the same 1500px width.
+- Every detail-page screen must use a fixed width of `1504px`. Choose a legal height that is divisible by 16: `2256px` for ordinary screens, `2496px` for high-information screens, or `2992px` for extra-long screens. Never exceed `2992px`. The first line of every detail-page prompt must state the exact selected dimensions, for example `1504×2256px ecommerce detail page screen, portrait orientation`. Screens within one set may use different approved heights but must share the same 1504px width.
 - Main images (主图) use `1200 × 1200 px` with a `1:1` aspect ratio by default. Recommend 5–8 main images per product. Main images focus on product presentation: full product hero, multiple angles, key detail close-ups, usage scene, and size/scale reference. Main images may carry minimal selling-point labels but must not become detail-page-style information screens.
 - Apply the same production dimensions to every supported platform: Taobao / Tmall, JD, Pinduoduo, Douyin ecommerce, and Xiaohongshu. Platform choice changes content emphasis, copy direction, information density, scenes, and visual strategy only; it does not change the default dimensions. Treat these as this skill's unified production specifications, not as each platform's official upload specifications.
 - User-specified dimensions or aspect ratios override the defaults for the current task only. If the user says only `3:4 main image`, use `1200 × 1600px`, portrait orientation. A main-image override does not change detail-page dimensions unless the user explicitly requests it. Do not permanently change the global default from a one-task override.
-- When the user requests a full ecommerce image set, generate both main images (5–8 images at 1200×1200px, 1:1 by default, or the user-specified override) and detail-page screens (1500px wide, height ≤3000px, 8–10 or 10–14 screens) unless the user explicitly asks for only one type.
+- When the user requests a full ecommerce image set, generate both main images (5–8 images at 1200×1200px, 1:1 by default, or the user-specified override) and detail-page screens (1504px wide using an approved height of 2256px, 2496px, or 2992px; 8–10 or 10–14 screens) unless the user explicitly asks for only one type.
 - Every screen must contain a main title plus at least one selling-point label or short phrase. Pure visual pages with no meaningful copy are not acceptable.
 - Each screen must solve one buyer demand with one core selling point. Material, ingredient, craft, detail, and scene pages may omit the full product, but they still need corresponding selling-point copy and visual proof.
 - On-image copy must be direct and short: clear main title, one selling-point phrase, and minimal auxiliary text. Do not use long paragraphs or meaningless decorative English.
@@ -179,7 +179,7 @@ Organize all output files into one classified product directory. Do not package 
 │   ├── main-02.png
 │   └── ...            (5–8张)
 ├── 02_详情页/
-│   ├── detail-01.png (1500px宽, 单屏高≤3000px)
+│   ├── detail-01.png (1504px宽, 单屏高为2256/2496/2992px)
 │   ├── detail-02.png
 │   └── ...            (8–10屏 或 10–14屏)
 └── 03_规划文档/

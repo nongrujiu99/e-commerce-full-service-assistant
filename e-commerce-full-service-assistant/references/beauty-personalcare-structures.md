@@ -4,7 +4,7 @@ Use for skincare, cosmetics, hair/body care, fragrance, personal care, and clean
 
 ## Recommended Screens (8–10 standard, 10–14 complex)
 
-Each screen uses fixed 1500px width and adaptive height ≤3000px.
+Each screen uses fixed 1504px width and a selected height of 2256px, 2496px, or 2992px.
 
 1. Cover: product texture hero visual plus a core usage-feel title.
 2. Pain point: low-risk scene descriptions such as dryness, oiliness, frizz, or dull-looking appearance.

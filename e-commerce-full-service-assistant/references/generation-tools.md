@@ -13,7 +13,7 @@ Read this file for direct image generation. Unless the user explicitly asks for 
 
 - Use built-in `image_gen` directly for all final image generation. This is the sole generation path.
 - Do not use any external deployment helper, PowerShell script, environment-variable-resolved generator, or direct HTTP/SDK image API for final image generation.
-- All detail-page screens use a fixed width of `1500px` and per-screen adaptive height no greater than `3000px` (typically 1500–2500px based on content). Every detail-page prompt must include `1500px width, height ≤3000px ecommerce detail page screen, portrait orientation`. Screens within one set may have different heights but must share the same 1500px width.
+- All detail-page screens use a fixed width of `1504px`. Select a height divisible by 16: `2256px` for ordinary screens, `2496px` for high-information screens, or `2992px` for extra-long screens. Every detail-page prompt must state the exact selected dimensions, for example `1504×2256px ecommerce detail page screen, portrait orientation`. Screens within one set may use different approved heights but must share the same 1504px width.
 - Main images (主图) use `1200 × 1200 px` with a `1:1` square aspect ratio by default. Recommend 5–8 main images per product. Every default main-image prompt must include `1200×1200px, 1:1 square ecommerce main image`. Main images focus on product presentation with minimal copy.
 - Use these default dimensions for every supported platform. Platform selection changes content emphasis and visual strategy only, not dimensions.
 - An explicit user-specified size or ratio overrides the default for the current task. If the user says only `3:4 main image`, use `1200×1600px`, portrait orientation. Do not apply a main-image override to detail pages unless explicitly requested.
@@ -25,7 +25,7 @@ Read this file for direct image generation. Unless the user explicitly asks for 
 - Create a classified output directory structure before saving:
   - `00_风格确认/` for the three style preview images and style-confirmation records
   - `01_主图/` for main images (1200×1200px, 1:1 by default, or the user-specified override)
-  - `02_详情页/` for detail-page screens (1500px wide, height ≤3000px)
+  - `02_详情页/` for detail-page screens (1504px wide; height 2256px, 2496px, or 2992px)
   - `03_规划文档/` for the planning Markdown file
 - Save style previews as `00_风格确认/style-A.png`, `style-B.png`, and `style-C.png`; save `参考图风格分析.md` when references are provided and always save `最终风格确认.md`.
 - Save each generated main image to `01_主图/main-01.png`, `main-02.png`, etc.
@@ -46,7 +46,7 @@ Read this file for direct image generation. Unless the user explicitly asks for 
 
 ## Request Shape
 
-For detail-page screens, set `width` to 1500 and choose `height` per screen based on content (1500–3000px, never exceeding 3000). If the tool does not support exact pixel dimensions, strongly constrain the prompt with `1500px width, height ≤3000px ecommerce detail page screen, portrait orientation, consistent 1500px width across the full set`. For default main images, set both `width` and `height` to 1200 for a 1:1 square ratio. If the user specifies a different size or ratio, use that instruction for the current task; `3:4 main image` without pixel dimensions means 1200×1600px portrait.
+For detail-page screens, set `width` to 1504 and choose an exact `height` per screen: 2256 for ordinary content, 2496 for high-information content, or 2992 for extra-long content. These values are divisible by 16. If the tool does not support exact pixel dimensions, strongly constrain the prompt with the exact selected size, portrait orientation, and consistent 1504px width across the full set, while recognizing that prompt text alone cannot guarantee output pixels. For default main images, set both `width` and `height` to 1200 for a 1:1 square ratio. If the user specifies a different size or ratio, use that instruction for the current task; `3:4 main image` without pixel dimensions means 1200×1600px portrait.
 
 When product images are provided, prefer using the original image as a product-identity reference input through `image_gen` (reference image mode). The reference image locks product identity only; it must not lock the source photo background, camera angle, crop, placement, lighting setup, or plain white-background product-photo composition. If reference images are unsupported by the current runtime, write the same `Product Consistency Anchors` / `Product Identity Lock` into every prompt and explicitly require consistency in visible product appearance, pattern/logo/nameplate placement, shape, proportions, structural parts, and relative position.
 

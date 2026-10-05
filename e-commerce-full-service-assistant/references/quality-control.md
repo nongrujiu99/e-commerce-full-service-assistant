@@ -34,7 +34,7 @@ Optional per-image checks:
 - Whether visual evidence supports the selling point: scene, comparison, action, material macro, structure detail, process flow, information card, ingredient / texture setup, or style pairing.
 - Whether text is readable, misspelled, broken, garbled, or too small.
 - Whether on-image copy is too long or becomes a paragraph.
-- Whether detail-page screens use a fixed 1500px width with per-screen height ≤3000px, and whether main images use 1200×1200px (1:1) by default or match the user's explicit override.
+- Whether detail-page screens use a fixed 1504px width and an approved height of 2256px, 2496px, or 2992px, and whether main images use 1200×1200px (1:1) by default or match the user's explicit override.
 - Whether fake logos, garbled text, watermarks, fabricated certifications, ratings, reviews, sales, discounts, efficacy, or parameters appear.
 - Whether unconfirmed accessories or functions appear, such as `USB charging`, `4 Pack`, `waterproof`, `dentist approved`, unprovided compatible model, or unprovided material composition.
 - Whether high-risk efficacy appears, such as treatment, whitening, weight loss, blood-sugar reduction, detoxification, or medical improvement.
@@ -96,7 +96,7 @@ Do not let the model add by itself:
 Record the following only as optional review items. Do not automatically regenerate or mark images as failed:
 
 - The image includes unconfirmed facts.
-- Detail-page screen width is not 1500px, or a screen height exceeds 3000px; or main images do not match 1200×1200px (1:1) by default or the user's explicit override.
+- Detail-page screen width is not 1504px, or its height is not one of 2256px, 2496px, or 2992px; or main images do not match 1200×1200px (1:1) by default or the user's explicit override.
 - Any screen lacks a main title or selling-point label/short phrase.
 - Copy is only decorative text, garbled text, or blank labels and does not form a clear selling point.
 - Key product appearance drifts noticeably, or product shape, pattern, logo/nameplate, decoration, structure, or positional relationship is inconsistent.

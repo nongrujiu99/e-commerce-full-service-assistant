@@ -66,6 +66,6 @@ If the user names a platform, adapt page emphasis:
 - Pinduoduo: direct benefit language, obvious use value, simple high-impact hierarchy.
 - Douyin / Xiaohongshu: lifestyle scene, visual impact, social sharing feeling, style identity.
 
-All supported platforms use the same default production dimensions: main images at 1200×1200px (1:1) and detail-page screens at 1500px width with adaptive height ≤3000px. Platform choice changes content emphasis and visual strategy only. User-specified dimensions or aspect ratios override these defaults for the current task.
+All supported platforms use the same default production dimensions: main images at 1200×1200px (1:1) and detail-page screens at 1504px width with an approved height of 2256px, 2496px, or 2992px. Platform choice changes content emphasis and visual strategy only. User-specified dimensions or aspect ratios override these defaults for the current task.
 
 If no platform is specified, use a general ecommerce detail page style.

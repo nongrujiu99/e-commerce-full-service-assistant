@@ -4,7 +4,7 @@ For food, beverages, nutritional products, and agricultural specialty detail pag
 
 ## Recommended Sequence (8–10 standard, 10–14 complex)
 
-Each screen uses fixed 1500px width and adaptive height ≤3000px.
+Each screen uses fixed 1504px width and a selected height of 2256px, 2496px, or 2992px.
 
 1. Product cover.
 2. Ingredient page.

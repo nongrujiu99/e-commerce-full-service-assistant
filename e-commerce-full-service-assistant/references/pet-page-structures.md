@@ -4,7 +4,7 @@ Use for pet food, cat/dog treats, cleaning and care products, leashes, toys, and
 
 ## Recommended Screens (8–10 standard, 10–14 complex)
 
-Each screen uses fixed 1500px width and adaptive height ≤3000px.
+Each screen uses fixed 1504px width and a selected height of 2256px, 2496px, or 2992px.
 
 1. Cover: product hero visual plus buyer-benefit title and short packaging-visible label.
 2. Scene: realistic use scenarios such as after walks, after training, after meals, or home interaction.

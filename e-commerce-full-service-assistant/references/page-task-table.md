@@ -31,7 +31,7 @@ Each screen must define:
 
 ## Default Screen Rhythm (8–10 standard, 10–14 complex)
 
-Use this rhythm unless the `Module Plan` selects a better count or the user specifies another count. Each screen uses fixed 1500px width and adaptive height ≤3000px:
+Use this rhythm unless the `Module Plan` selects a better count or the user specifies another count. Each screen uses fixed 1504px width and a selected height of 2256px, 2496px, or 2992px:
 
 1. `Impact Cover`: immediately communicate the product's strongest purchase reason.
 2. `Core Demand`: answer the highest buyer concern with the most direct selling point.

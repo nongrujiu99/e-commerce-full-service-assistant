@@ -4,7 +4,7 @@ Use for home goods, daily-use products, storage, cleaning, cookware, and appeara
 
 ## Recommended Screens (8–10 standard, 10–14 complex)
 
-Each screen uses fixed 1500px width and adaptive height ≤3000px.
+Each screen uses fixed 1504px width and a selected height of 2256px, 2496px, or 2992px.
 
 1. Cover: product hero visual in a realistic home environment.
 2. Pain point: clutter, hard access, cleaning difficulty, space usage, or inconvenient operation.

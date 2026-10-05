@@ -6,7 +6,7 @@ Each detail-page image must be generated independently. Do not place multiple sc
 
 Every image prompt must include:
 
-1. `1500px width, height ≤3000px ecommerce detail page screen, portrait orientation` (for detail-page screens); for main images use `1200×1200px, 1:1 square ecommerce main image` by default, or the user's explicit size/aspect-ratio override for the current task. If the user says only `3:4 main image`, use `1200×1600px, 3:4 portrait ecommerce main image`.
+1. State one exact approved detail-page size: `1504×2256px`, `1504×2496px`, or `1504×2992px ecommerce detail page screen, portrait orientation`; for main images use `1200×1200px, 1:1 square ecommerce main image` by default, or the user's explicit size/aspect-ratio override for the current task. If the user says only `3:4 main image`, use `1200×1600px, 3:4 portrait ecommerce main image`.
 2. `Campaign Style Lock`: unified palette, typography feel, background system, lighting, icon style, whitespace logic, and product scale.
 3. `Style System Lock`: consistent title hierarchy, label style, information-card style, icon/line style, color system, and lighting system across the whole set.
 4. `Design Strength Lock`: category visual motif, page rhythm, composition contrast, signature visual devices, color contrast, and template bans.
